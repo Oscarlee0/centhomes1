@@ -17,22 +17,22 @@ const Hero = () => {
       <div className="container mx-auto px-6 py-20 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
-          <div className="space-y-8">
+          <div className="space-y-8 animate-slide-in-left">
             {/* Geometric Dots */}
-            <div className="relative dots-pattern w-8 h-8 mb-8"></div>
+            <div className="relative dots-pattern w-8 h-8 mb-8 animate-float"></div>
             
             <div className="space-y-6">
-              <h1 className="text-display">
+              <h1 className="text-display animate-fade-in">
                 MODERN
                 <br />
                 <span className="text-muted-foreground">ARCHITECTURE</span>
               </h1>
               
               <div className="relative">
-                <h2 className="text-heading line-accent">DESIGN STUDIO</h2>
+                <h2 className="text-heading line-accent animate-slide-up">DESIGN STUDIO</h2>
               </div>
               
-              <p className="text-subheading max-w-md">
+              <p className="text-subheading max-w-md animate-slide-up">
                 Creating spaces that inspire. We blend innovative design with 
                 functional architecture to craft environments that enhance human experience.
               </p>
@@ -53,17 +53,17 @@ const Hero = () => {
           </div>
 
           {/* Right Image */}
-          <div className="relative">
-            <div className="aspect-[4/3] overflow-hidden bg-muted">
+          <div className="relative animate-slide-in-right">
+            <div className="aspect-[4/3] overflow-hidden bg-muted rounded-lg shadow-2xl transition-transform duration-700 hover:scale-105">
               <img 
                 src={heroImage} 
                 alt="Modern architectural interior" 
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
               />
             </div>
             
             {/* Floating Info Card */}
-            <div className="absolute -bottom-6 -left-6 bg-card p-6 shadow-lg border border-border">
+            <div className="absolute -bottom-6 -left-6 bg-card p-6 shadow-2xl border border-border rounded-lg animate-scale-in transition-all duration-300 hover:shadow-3xl hover:-translate-y-1">
               <div className="text-sm tracking-wide text-muted-foreground">FEATURED PROJECT</div>
               <div className="text-lg font-light mt-1">Minimalist Residence</div>
               <div className="text-sm text-muted-foreground mt-2">2024</div>

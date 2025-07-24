@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import { ThemeToggle } from "@/components/ui/theme-toggle";
 import { Menu, X } from "lucide-react";
 
 const Navigation = () => {
@@ -25,39 +26,42 @@ const Navigation = () => {
           <div className="hidden md:flex items-center space-x-8">
             <button 
               onClick={() => scrollToSection('projects')}
-              className="text-sm tracking-wide hover:text-accent transition-colors"
+              className="text-sm tracking-wide hover:text-accent transition-colors duration-300 hover:scale-105"
             >
               PROJECTS
             </button>
             <button 
               onClick={() => scrollToSection('about')}
-              className="text-sm tracking-wide hover:text-accent transition-colors"
+              className="text-sm tracking-wide hover:text-accent transition-colors duration-300 hover:scale-105"
             >
               ABOUT
             </button>
             <button 
               onClick={() => scrollToSection('services')}
-              className="text-sm tracking-wide hover:text-accent transition-colors"
+              className="text-sm tracking-wide hover:text-accent transition-colors duration-300 hover:scale-105"
             >
               SERVICES
             </button>
             <button 
               onClick={() => scrollToSection('contact')}
-              className="text-sm tracking-wide hover:text-accent transition-colors"
+              className="text-sm tracking-wide hover:text-accent transition-colors duration-300 hover:scale-105"
             >
               CONTACT
             </button>
+            <ThemeToggle />
           </div>
 
-          {/* Mobile Menu Button */}
-          <Button
-            variant="ghost"
-            size="icon"
-            className="md:hidden"
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            {isOpen ? <X size={20} /> : <Menu size={20} />}
-          </Button>
+          {/* Mobile Actions */}
+          <div className="md:hidden flex items-center space-x-2">
+            <ThemeToggle />
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => setIsOpen(!isOpen)}
+            >
+              {isOpen ? <X size={20} /> : <Menu size={20} />}
+            </Button>
+          </div>
         </div>
 
         {/* Mobile Navigation */}

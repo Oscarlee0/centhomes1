@@ -22,10 +22,10 @@ const Services = () => {
     <section id="services" className="py-20 bg-background">
       <div className="container mx-auto px-6">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <div className="relative dots-pattern w-8 h-8 mx-auto mb-8"></div>
-          <h2 className="text-heading mb-4">OUR SERVICES</h2>
-          <p className="text-subheading max-w-2xl mx-auto">
+        <div className="text-center mb-16 animate-fade-in">
+          <div className="relative dots-pattern w-8 h-8 mx-auto mb-8 animate-float"></div>
+          <h2 className="text-heading mb-4 animate-slide-up">OUR SERVICES</h2>
+          <p className="text-subheading max-w-2xl mx-auto animate-slide-up">
             We offer comprehensive architectural services designed to bring 
             your vision to life with precision and creativity.
           </p>
@@ -34,7 +34,11 @@ const Services = () => {
         {/* Services Grid */}
         <div className="grid md:grid-cols-2 gap-8">
           {services.map((service, index) => (
-            <div key={index} className="group p-8 border border-border hover:bg-muted/50 transition-colors duration-300">
+            <div 
+              key={index} 
+              className="group p-8 border border-border hover:bg-muted/50 transition-all duration-300 rounded-lg hover:shadow-lg hover:-translate-y-2 animate-scale-in"
+              style={{ animationDelay: `${index * 0.15}s` }}
+            >
               <div className="space-y-4">
                 <div className="flex items-start justify-between">
                   <h3 className="text-lg font-light tracking-wide group-hover:text-accent transition-colors">
@@ -50,7 +54,7 @@ const Services = () => {
                 </p>
                 
                 <div className="pt-2">
-                  <button className="text-xs tracking-wide border-b border-primary pb-1 hover:border-primary/60 transition-colors">
+                  <button className="text-xs tracking-wide border-b border-primary pb-1 hover:border-primary/60 transition-all duration-300 hover:translate-x-2">
                     LEARN MORE
                   </button>
                 </div>

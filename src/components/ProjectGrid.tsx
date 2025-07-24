@@ -34,10 +34,10 @@ const ProjectGrid = () => {
     <section id="projects" className="py-20 bg-background">
       <div className="container mx-auto px-6">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <div className="relative dots-pattern w-8 h-8 mx-auto mb-8"></div>
-          <h2 className="text-heading mb-4">SELECTED PROJECTS</h2>
-          <p className="text-subheading max-w-2xl mx-auto">
+        <div className="text-center mb-16 animate-fade-in">
+          <div className="relative dots-pattern w-8 h-8 mx-auto mb-8 animate-float"></div>
+          <h2 className="text-heading mb-4 animate-slide-up">SELECTED PROJECTS</h2>
+          <p className="text-subheading max-w-2xl mx-auto animate-slide-up">
             A curated collection of our latest architectural achievements, 
             showcasing our commitment to innovative design and exceptional craftsmanship.
           </p>
@@ -45,17 +45,21 @@ const ProjectGrid = () => {
 
         {/* Projects Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project) => (
-            <div key={project.id} className="project-card group cursor-pointer">
-              <div className="aspect-[4/3] overflow-hidden bg-muted mb-6">
+          {projects.map((project, index) => (
+            <div 
+              key={project.id} 
+              className="project-card group cursor-pointer animate-scale-in rounded-lg overflow-hidden"
+              style={{ animationDelay: `${index * 0.2}s` }}
+            >
+              <div className="aspect-[4/3] overflow-hidden bg-muted mb-6 rounded-lg">
                 <img 
                   src={project.image} 
                   alt={project.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                 />
               </div>
               
-              <div className="space-y-3">
+              <div className="space-y-3 p-6">
                 <div className="flex items-center justify-between">
                   <span className="text-xs tracking-wide text-muted-foreground">
                     {project.category}
@@ -65,7 +69,7 @@ const ProjectGrid = () => {
                   </span>
                 </div>
                 
-                <h3 className="text-xl font-light tracking-wide group-hover:text-accent transition-colors">
+                <h3 className="text-xl font-light tracking-wide group-hover:text-accent transition-colors duration-300">
                   {project.title}
                 </h3>
                 
@@ -74,7 +78,7 @@ const ProjectGrid = () => {
                 </p>
                 
                 <div className="pt-2">
-                  <button className="text-xs tracking-wide border-b border-primary pb-1 hover:border-primary/60 transition-colors">
+                  <button className="text-xs tracking-wide border-b border-primary pb-1 hover:border-primary/60 transition-all duration-300 hover:translate-x-2">
                     VIEW PROJECT
                   </button>
                 </div>
