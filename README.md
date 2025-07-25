@@ -1,73 +1,131 @@
-# Welcome to your Lovable project
+# CENT'S HOMES - Blueprint Showcase Hub
 
-## Project info
+A modern, responsive web application for CENT'S HOMES, showcasing architectural projects, interior designs, and company services. Built with React, Vite, TypeScript, Tailwind CSS, and shadcn-ui.
 
-**URL**: https://lovable.dev/projects/d758ea26-2f18-49ec-83b9-222ff5aed4ce
+---
 
-## How can I edit this code?
+## 🚀 Project Overview
 
-There are several ways of editing your application.
+CENT'S HOMES Blueprint Showcase Hub is a portfolio and business site for an architecture and design firm. It features:
 
-**Use Lovable**
+- A hero section with branding and navigation
+- Dynamic project cards with modals for detailed views
+- Interior Designs gallery with modal grid
+- About, Services, and Contact sections
+- Social media integration
+- Floating scroll-to-top button
+- Custom favicon and branding
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/d758ea26-2f18-49ec-83b9-222ff5aed4ce) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## 🛠️ Tech Stack
 
-**Use your preferred IDE**
+- **React** (with Vite)
+- **TypeScript**
+- **Tailwind CSS**
+- **shadcn-ui** (for UI components)
+- **EmailJS** (for contact form, optional)
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+---
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 📦 Features & Steps Taken
 
-Follow these steps:
+### 1. **Branding & Navigation**
+
+- Custom logo and favicon added
+- Navigation bar with brand name and logo
+- Footer with social links (open in new tab)
+
+### 2. **Project Showcase**
+
+- Four project cards, each with images and detailed descriptions
+- Images organized in `src/assets` by project
+- Clicking a card opens a modal with a carousel and project details
+
+### 3. **Interior Designs Gallery**
+
+- New section after projects: "Interior Designs"
+- Displays 3 images in a grid, with a creative subheading
+- "Show More" button opens a modal with the rest of the images in a grid
+- Modal supports scrolling for overflow
+
+### 4. **About, Services, and Contact**
+
+- About section with custom image
+- Services section with "Learn More" button scrolling to contact
+- Contact form (with EmailJS integration for sending messages)
+- Floating scroll-to-top button appears after scrolling
+
+### 5. **General Improvements**
+
+- All external links open in new tabs
+- Responsive and modern UI using Tailwind and shadcn-ui
+- Unused images and code cleaned up
+
+---
+
+## 📝 Getting Started
+
+### 1. **Clone the repository**
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
 git clone <YOUR_GIT_URL>
+cd blueprint-showcase-hub
+```
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+### 2. **Install dependencies**
 
-# Step 3: Install the necessary dependencies.
-npm i
+```sh
+npm install
+```
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+### 3. **Run the development server**
+
+```sh
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+### 4. **Set up EmailJS (optional, for contact form)**
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+- Create an account at [EmailJS](https://www.emailjs.com/)
+- Get your Service ID, Template ID, and User ID
+- Replace the placeholders in `src/components/Contact.tsx` with your actual IDs
 
-**Use GitHub Codespaces**
+---
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## 📁 Project Structure
 
-## What technologies are used for this project?
+```
+public/
+  fav.ico           # Favicon
+src/
+  assets/           # Project and gallery images
+  components/       # React components (Navigation, ProjectGrid, InteriorDesigns, etc.)
+  pages/            # Main page (Index.tsx)
+  ...
+```
 
-This project is built with:
+---
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## 🌐 Deployment
 
-## How can I deploy this project?
+You can deploy this project to Vercel, Netlify, or any static hosting provider. Just build with:
 
-Simply open [Lovable](https://lovable.dev/projects/d758ea26-2f18-49ec-83b9-222ff5aed4ce) and click on Share -> Publish.
+```sh
+npm run build
+```
 
-## Can I connect a custom domain to my Lovable project?
+And upload the `dist/` folder.
 
-Yes, you can!
+---
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## 🙏 Credits
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+- Logo and branding by CENT'S HOMES
+- UI powered by shadcn-ui and Tailwind CSS
+
+---
+
+## 📣 Contact
+
+For business inquiries, use the contact form on the site or email: Centobinze@gmail.com
