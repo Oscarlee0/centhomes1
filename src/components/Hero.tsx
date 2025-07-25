@@ -29,7 +29,7 @@ const Hero = () => {
   };
 
   return (
-    <section className='min-h-screen relative flex items-center justify-center overflow-hidden bg-background'>
+    <section className='min-h-screen relative flex items-center justify-center overflow-hidden bg-background pr-4 sm:pr-8'>
       {/* Grid Pattern Background */}
       <div className='absolute inset-0 grid-pattern opacity-30'></div>
 
@@ -40,7 +40,7 @@ const Hero = () => {
             {/* Geometric Dots */}
             <div className='relative dots-pattern w-8 h-8 mb-8 animate-float'></div>
 
-            <div className='space-y-6'>
+            <div className='space-y-6 sm:pr-8'>
               <h1 className='text-display animate-fade-in'>
                 MODERN
                 <br />
