@@ -1,5 +1,8 @@
 import { useState } from "react";
-import project1 from "@/assets/project-1.jpg";
+import project1floorplan from "@/assets/project1-floorplan.png";
+import project1exterior1 from "@/assets/project1-exterior1.png";
+import project1exterior2 from "@/assets/project1-exterior2.png";
+import project1front from "@/assets/project1-front.png";
 import project2 from "@/assets/project-2.jpg";
 import project3 from "@/assets/project-3.jpg";
 import ProjectCard from "./ProjectCard";
@@ -12,12 +15,39 @@ const ProjectGrid = () => {
   const projects = [
     {
       id: 1,
-      title: "Urban Residence",
-      category: "Residential", 
+      title: "5-Bedroom Duplex & Penthouse Mansion",
+      category: "Luxury Residential", 
       year: "2024",
-      images: [project1, project1, project1, project1], // Placeholder - will be updated with actual images
-      description: "Contemporary living space designed for urban professionals",
-      details: "This modern residential project showcases clean lines, sustainable materials, and smart home integration. The design prioritizes natural light and open spaces while maintaining privacy and comfort."
+      images: [project1exterior1, project1exterior2, project1front, project1floorplan],
+      description: "5bedroom duplex and a penthouse mansion with different facilities crafted for modern luxury living",
+      details: `BUILDING DETAILS:
+• Ante room / Restroom
+• A void living room  
+• Privatized living room
+• 2 Dinnings
+• Spacious Kitchen/ Store and Laundry area
+• 2 Stairs
+• 2 Bedrooms all ensuite (ground floor)/ working wardrobes
+
+FIRST FLOOR:
+• 3 Bedrooms all ensuite / working wardrobes
+• Kitchen
+• Private lounge  
+• Dining / restrooms (crafted for male and female separately)
+• Balcony
+• 1 Staircase
+
+PENTHOUSE FLOOR:
+• Ante room / Restroom
+• Kitchen
+• Dining
+• Living room
+• Lounge / Sit out
+• Master Bedroom / restroom / walking wardrobe / Sit out
+
+OTHER FACILITIES:
+• 2 garages
+• Exclusive Lounge Attached to one of the Garage`
     },
     {
       id: 2,
