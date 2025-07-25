@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
 import { Menu, X } from "lucide-react";
+import centsHomesLogo from "@/assets/cents-homes-logo.png";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,8 +19,8 @@ const Navigation = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm border-b border-border">
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <div className="text-2xl font-light tracking-wider">
-            ARCH<span className="font-normal">STUDIO</span>
+          <div className="flex items-center space-x-3">
+            <img src={centsHomesLogo} alt="Cent's Homes" className="h-8 w-auto" />
           </div>
           
           {/* Desktop Navigation */}

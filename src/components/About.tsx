@@ -1,8 +1,10 @@
+import architectPhoto from "@/assets/architect-photo.png";
+
 const About = () => {
   return (
     <section id="about" className="py-20 bg-muted/30">
       <div className="container mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-3 gap-16 items-center">
           {/* Left Content */}
           <div className="space-y-8 animate-slide-in-left">
             <div className="relative dots-pattern w-8 h-8 animate-float"></div>
@@ -13,23 +15,43 @@ const About = () => {
               </div>
               
               <p className="text-subheading animate-slide-up">
-                We are a collective of architects, designers, and visionaries 
-                committed to creating spaces that transcend the ordinary.
+                Creating functional, sustainable, and visually compelling spaces 
+                that reflect the needs and identity of each client.
               </p>
               
               <div className="space-y-4 text-sm leading-relaxed text-muted-foreground">
                 <p>
-                  Founded in 2015, our studio has grown from a small team of passionate 
-                  architects to a globally recognized design firm. We believe that 
-                  architecture should not only shelter but inspire, not only function 
-                  but elevate the human spirit.
+                  I am a passionate and detail-oriented architect with a strong foundation in design,
+                  technical drawing, and project management. With a deep appreciation for both modern
+                  innovation and timeless architecture, I specialize in creating functional, sustainable, and
+                  visually compelling spaces that reflect the needs and identity of each client.
                 </p>
                 
                 <p>
-                  Our approach combines cutting-edge technology with timeless design 
-                  principles, ensuring that every project we undertake stands as a 
-                  testament to both innovation and enduring beauty.
+                  My approach blends creativity with practicality, ensuring that every project I undertake balances
+                  aesthetic value with structural integrity and efficiency. I thrive in collaborative environments
+                  and am always driven by a commitment to excellence, continuous learning, and delivering
+                  meaningful architectural experiences.
                 </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Center Image */}
+          <div className="flex justify-center animate-scale-in">
+            <div className="relative">
+              <div className="aspect-square w-80 overflow-hidden rounded-lg shadow-2xl">
+                <img 
+                  src={architectPhoto} 
+                  alt="Architect" 
+                  className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
+                />
+              </div>
+              
+              {/* Floating Info Card */}
+              <div className="absolute -bottom-4 -right-4 bg-card p-4 shadow-2xl border border-border rounded-lg animate-float">
+                <div className="text-xs tracking-wide text-muted-foreground">ARCHITECT</div>
+                <div className="text-sm font-light mt-1">Professional</div>
               </div>
             </div>
           </div>

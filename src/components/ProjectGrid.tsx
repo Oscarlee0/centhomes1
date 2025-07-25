@@ -1,34 +1,53 @@
+import { useState } from "react";
 import project1 from "@/assets/project-1.jpg";
 import project2 from "@/assets/project-2.jpg";
 import project3 from "@/assets/project-3.jpg";
+import ProjectCard from "./ProjectCard";
+import ProjectModal from "./ProjectModal";
 
 const ProjectGrid = () => {
+  const [selectedProject, setSelectedProject] = useState<any>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   const projects = [
     {
       id: 1,
       title: "Urban Residence",
-      category: "Residential",
+      category: "Residential", 
       year: "2024",
-      image: project1,
-      description: "Contemporary living space designed for urban professionals"
+      images: [project1, project1, project1, project1], // Placeholder - will be updated with actual images
+      description: "Contemporary living space designed for urban professionals",
+      details: "This modern residential project showcases clean lines, sustainable materials, and smart home integration. The design prioritizes natural light and open spaces while maintaining privacy and comfort."
     },
     {
       id: 2,
       title: "Corporate Center",
       category: "Commercial",
-      year: "2023",
-      image: project2,
-      description: "Modern office building with sustainable design principles"
+      year: "2023", 
+      images: [project2, project2, project2, project2], // Placeholder - will be updated with actual images
+      description: "Modern office building with sustainable design principles",
+      details: "A state-of-the-art commercial building featuring energy-efficient systems, flexible workspaces, and biophilic design elements that enhance productivity and employee wellbeing."
     },
     {
       id: 3,
       title: "Luxury Interior",
       category: "Interior",
       year: "2024",
-      image: project3,
-      description: "Sophisticated interior design for high-end residential project"
+      images: [project3, project3, project3, project3], // Placeholder - will be updated with actual images  
+      description: "Sophisticated interior design for high-end residential project",
+      details: "An elegant interior transformation combining contemporary aesthetics with timeless elements, featuring custom furniture, premium materials, and curated art collections."
     }
   ];
+
+  const handleProjectClick = (project: any) => {
+    setSelectedProject(project);
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    setSelectedProject(null);
+  };
 
   return (
     <section id="projects" className="py-20 bg-background">
@@ -46,46 +65,23 @@ const ProjectGrid = () => {
         {/* Projects Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <div 
-              key={project.id} 
-              className="project-card group cursor-pointer animate-scale-in rounded-lg overflow-hidden"
-              style={{ animationDelay: `${index * 0.2}s` }}
-            >
-              <div className="aspect-[4/3] overflow-hidden bg-muted mb-6 rounded-lg">
-                <img 
-                  src={project.image} 
-                  alt={project.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                />
-              </div>
-              
-              <div className="space-y-3 p-6">
-                <div className="flex items-center justify-between">
-                  <span className="text-xs tracking-wide text-muted-foreground">
-                    {project.category}
-                  </span>
-                  <span className="text-xs tracking-wide text-muted-foreground">
-                    {project.year}
-                  </span>
-                </div>
-                
-                <h3 className="text-xl font-light tracking-wide group-hover:text-accent transition-colors duration-300">
-                  {project.title}
-                </h3>
-                
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  {project.description}
-                </p>
-                
-                <div className="pt-2">
-                  <button className="text-xs tracking-wide border-b border-primary pb-1 hover:border-primary/60 transition-all duration-300 hover:translate-x-2">
-                    VIEW PROJECT
-                  </button>
-                </div>
-              </div>
-            </div>
+            <ProjectCard
+              key={project.id}
+              project={project}
+              index={index}
+              onClick={() => handleProjectClick(project)}
+            />
           ))}
         </div>
+        
+        {/* Project Modal */}
+        {selectedProject && (
+          <ProjectModal
+            isOpen={isModalOpen}
+            onClose={handleCloseModal}
+            project={selectedProject}
+          />
+        )}
       </div>
     </section>
   );

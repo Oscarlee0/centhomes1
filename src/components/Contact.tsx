@@ -25,21 +25,21 @@ const Contact = () => {
             {/* Contact Info */}
             <div className="space-y-6 animate-slide-up">
               <div className="space-y-2 transition-all duration-300 hover:translate-x-2">
-                <div className="text-sm tracking-wide text-muted-foreground">EMAIL</div>
-                <div className="text-lg font-light">hello@archstudio.com</div>
+                <div className="text-sm tracking-wide text-muted-foreground">PHONE</div>
+                <div className="text-lg font-light">+23408103404379</div>
               </div>
               
               <div className="space-y-2 transition-all duration-300 hover:translate-x-2">
-                <div className="text-sm tracking-wide text-muted-foreground">PHONE</div>
-                <div className="text-lg font-light">+1 (555) 123-4567</div>
+                <div className="text-sm tracking-wide text-muted-foreground">EMAIL</div>
+                <div className="text-lg font-light">Centobinze@gmail.com</div>
               </div>
               
               <div className="space-y-2 transition-all duration-300 hover:translate-x-2">
                 <div className="text-sm tracking-wide text-muted-foreground">OFFICE</div>
                 <div className="text-lg font-light">
-                  123 Design Street<br />
-                  Architecture District<br />
-                  New York, NY 10001
+                  No4 Ezeugwuclose off<br />
+                  Ofulonu Nsukka Enugu state<br />
+                  Nigeria
                 </div>
               </div>
             </div>

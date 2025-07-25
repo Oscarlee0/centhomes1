@@ -29,7 +29,7 @@ const Hero = () => {
               </h1>
               
               <div className="relative">
-                <h2 className="text-heading line-accent animate-slide-up">DESIGN STUDIO</h2>
+                <h2 className="text-heading line-accent animate-slide-up">CENT'S HOMES</h2>
               </div>
               
               <p className="text-subheading max-w-md animate-slide-up">
