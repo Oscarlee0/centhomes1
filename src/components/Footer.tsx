@@ -77,7 +77,7 @@ const Footer = () => {
                   LinkedIn
                 </a>
                 <a
-                  href='https://facebook.com/centshomes'
+                  href='https://www.facebook.com/profile.php?id=61577382687250&mibextid=ZbWKwL'
                   className='hover:text-primary-foreground transition-colors'
                   target='_blank'
                   rel='noopener noreferrer'

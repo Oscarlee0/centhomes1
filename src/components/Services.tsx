@@ -20,6 +20,11 @@ const Services = () => {
       description:
         "Comprehensive project oversight from initial design through final construction delivery.",
     },
+    {
+      title: "CLEANING SERVICES",
+      description:
+        "Comprehensive cleaning oversight from first walkthrough to final inspection, we ensure every space is left spotless and ready.",
+    },
   ];
 
   const scrollToContact = () => {

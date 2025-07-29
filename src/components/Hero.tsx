@@ -40,11 +40,16 @@ const Hero = () => {
             {/* Geometric Dots */}
             <div className='relative dots-pattern w-8 h-8 mb-8 animate-float'></div>
 
-            <div className='space-y-6 sm:pr-8'>
-              <h1 className='text-display animate-fade-in'>
+            <div className='space-y-6 '>
+              <h1
+                className='text-6xl md:text-7xl lg:text-8xl font-light tracking-tight leading-none animate-fade-in mx-auto'
+                style={{ color: "hsl(var(--text-bold))" }}
+              >
                 MODERN
                 <br />
-                <span className='text-muted-foreground'>ARCHITECTURE</span>
+                <span className='text-muted-foreground'>
+                  ARCHITECTURE
+                </span>
               </h1>
 
               <div className='relative'>
@@ -53,7 +58,10 @@ const Hero = () => {
                 </h2>
               </div>
 
-              <p className='text-subheading max-w-md animate-slide-up'>
+              <p
+                className='text-sm sm:text-base md:text-lg lg:text-xl font-light tracking-wide  max-w-full sm:max-w-md animate-slide-up'
+                style={{ color: "hsl(var(--text-light))" }}
+              >
                 Creating spaces that inspire. We blend innovative design with
                 functional architecture to craft environments that enhance human
                 experience.
