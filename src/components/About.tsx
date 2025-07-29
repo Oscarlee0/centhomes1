@@ -23,7 +23,7 @@ const About = () => {
 
               <div className='space-y-4 text-m leading-relaxed text-muted-foreground'>
                 <p>
-                  I am a passionate and detail-oriented architect with a strong
+                  I am Anadile Obinze Pascal the CEO and the Architect of Cent's Homes a passionate and detail-oriented architect with a strong
                   foundation in design, technical drawing, and project
                   management. With a deep appreciation for both modern
                   innovation and timeless architecture, I specialize in creating
