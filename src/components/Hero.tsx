@@ -42,12 +42,12 @@ const Hero = () => {
 
             <div className='space-y-6 '>
               <h1
-                className='text-6xl md:text-7xl lg:text-8xl font-light tracking-tight leading-none animate-fade-in mx-auto'
+                className='text-5xl md:text-6xl lg:text-8xl font-light tracking-tight leading-none animate-fade-in mx-auto'
                 style={{ color: "hsl(var(--text-bold))" }}
               >
                 MODERN
                 <br />
-                <span className='text-muted-foreground'>
+                <span className='text-muted-foreground pr-8'>
                   ARCHITECTURE
                 </span>
               </h1>
