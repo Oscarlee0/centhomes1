@@ -15,7 +15,7 @@ const Ambassador = () => {
       title: "Lecturer, Certified Real Estate Agent & Marketing Enthusiast",
       description:
         "A lecturer, certified real estate agent, and enthusiastic marketer, Brendan Chibuike Kenneth, PhD, has a solid foundation in business and strategic communication. He offers a distinctive fusion of knowledge in education, real estate, and branding by fusing his academic background with practical real estate and marketing experience. Dr. Kenneth is dedicated to using knowledge and strategy to empower students, clients, and enterprises. He is well-known for his pragmatic approach and industry-savvy viewpoint.",
-      image: "/src/assets/amb1.jpg", // Using the existing image from assets
+      image: "./src/assets/amb1.jpg", 
       credentials: "PhD in Business & Strategic Communication",
     },
   ];
@@ -69,7 +69,7 @@ const Ambassador = () => {
                             <h3 className="text-xl font-semibold text-foreground mb-1">
                               {ambassador.name}
                             </h3>
-                            <p className="text-sm text-accent font-medium mb-2">
+                            <p className="text-sm text-white dark:text-white font-medium mb-2">
                               {ambassador.credentials}
                             </p>
                             <p className="text-sm text-muted-foreground italic">
@@ -84,9 +84,9 @@ const Ambassador = () => {
                           {/* Decorative Element */}
                           <div className="pt-4 border-t border-border/50">
                             <div className="flex items-center space-x-2">
-                              <div className="w-2 h-2 bg-accent rounded-full"></div>
-                              <div className="w-1 h-1 bg-accent/60 rounded-full"></div>
-                              <div className="w-1 h-1 bg-accent/40 rounded-full"></div>
+                              <div className="w-2 h-2 bg-white dark:bg-white rounded-full"></div>
+                              <div className="w-1 h-1 bg-white/60 dark:bg-white/60 rounded-full"></div>
+                              <div className="w-1 h-1 bg-white/40 dark:bg-white/40 rounded-full"></div>
                             </div>
                           </div>
                         </div>
@@ -106,7 +106,7 @@ const Ambassador = () => {
               {ambassadors.map((_, index) => (
                 <div
                   key={index}
-                  className="w-2 h-2 bg-accent/60 rounded-full"
+                  className="w-2 h-2 bg-white/60 dark:bg-white/60 rounded-full"
                 ></div>
               ))}
             </div>
