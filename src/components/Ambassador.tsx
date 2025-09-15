@@ -7,8 +7,18 @@ import {
 } from "@/components/ui/carousel";
 import { Card, CardContent } from "@/components/ui/card";
 import amb1Image from "@/assets/amb1.jpg";
+import { useState } from "react";
 
 const Ambassador = () => {
+  const [expandedDescriptions, setExpandedDescriptions] = useState<{ [key: number]: boolean }>({});
+
+  const toggleDescription = (id: number) => {
+    setExpandedDescriptions(prev => ({
+      ...prev,
+      [id]: !prev[id]
+    }));
+  };
+
   const ambassadors = [
     {
       id: 1,
@@ -38,7 +48,7 @@ const Ambassador = () => {
         <div className="max-w-4xl mx-auto">
           <Carousel
             opts={{
-              align: "start",
+              align: "center",
               loop: true,
             }}
             className="w-full"
@@ -70,7 +80,7 @@ const Ambassador = () => {
                             <h3 className="text-xl font-semibold text-foreground mb-1">
                               {ambassador.name}
                             </h3>
-                            <p className="text-sm text-white dark:text-white font-medium mb-2">
+                            <p className="text-sm text-black dark:text-white font-medium mb-2">
                               {ambassador.credentials}
                             </p>
                             <p className="text-sm text-muted-foreground italic">
@@ -78,9 +88,43 @@ const Ambassador = () => {
                             </p>
                           </div>
 
-                          <p className="text-sm text-muted-foreground leading-relaxed line-clamp-6">
-                            {ambassador.description}
-                          </p>
+                          <div className="text-sm text-muted-foreground leading-relaxed">
+                            {(() => {
+                              const isExpanded = expandedDescriptions[ambassador.id];
+                              const description = ambassador.description;
+                              const truncatedText = description.substring(0, description.indexOf("communication.") + "communication.".length);
+                              const remainingText = description.substring(description.indexOf("communication.") + "communication.".length);
+                              
+                              return (
+                                <>
+                                  <span>
+                                    {isExpanded ? description : truncatedText}
+                                    {!isExpanded && remainingText && (
+                                      <>
+                                        <button
+                                          onClick={() => toggleDescription(ambassador.id)}
+                                          className="text-primary hover:text-primary/80 underline ml-1 transition-colors"
+                                        >
+                                          read more
+                                        </button>
+                                      </>
+                                    )}
+                                  </span>
+                                  {isExpanded && remainingText && (
+                                    <div className="mt-2">
+                                      <span>{remainingText}</span>
+                                      <button
+                                        onClick={() => toggleDescription(ambassador.id)}
+                                        className="text-primary hover:text-primary/80 underline ml-1 transition-colors"
+                                      >
+                                        show less
+                                      </button>
+                                    </div>
+                                  )}
+                                </>
+                              );
+                            })()}
+                          </div>
 
                           {/* Decorative Element */}
                           <div className="pt-4 border-t border-border/50">
