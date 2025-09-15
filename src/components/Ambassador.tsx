@@ -15,7 +15,7 @@ const Ambassador = () => {
       title: "Lecturer, Certified Real Estate Agent & Marketing Enthusiast",
       description:
         "A lecturer, certified real estate agent, and enthusiastic marketer, Brendan Chibuike Kenneth, PhD, has a solid foundation in business and strategic communication. He offers a distinctive fusion of knowledge in education, real estate, and branding by fusing his academic background with practical real estate and marketing experience. Dr. Kenneth is dedicated to using knowledge and strategy to empower students, clients, and enterprises. He is well-known for his pragmatic approach and industry-savvy viewpoint.",
-      image: "/src/assets/me1.jpg", // Using the existing image from assets
+      image: "/src/assets/amb1.jpg", // Using the existing image from assets
       credentials: "PhD in Business & Strategic Communication",
     },
   ];
